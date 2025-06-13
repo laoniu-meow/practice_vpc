@@ -72,9 +72,9 @@ In root directory:
 
 # Initial, execute plan and apply the plan to real infrastructure
 
-terraform init
-terraform plan
-terraform apply
+- terraform init
+- terraform plan
+- terraform apply
 
 # Summary
 
