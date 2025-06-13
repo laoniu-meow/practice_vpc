@@ -11,3 +11,9 @@ variable "aws_profile" {
   description = "The AWS profile to use for the infrastructure"
   default     = "default"
 }
+
+variable "aws_project_name" {
+  type        = string
+  description = "The AWS project name to use for the infrastructure"
+  default     = "default"
+}

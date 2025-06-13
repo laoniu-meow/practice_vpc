@@ -14,3 +14,9 @@ provider "aws" {
   region  = var.aws_region
   profile = var.aws_profile
 }
+
+module "vpc" {
+  source         = "./modules/vpc"
+  vpc_cidr_block = "192.168.0.0/16"
+  prject_name    = var.aws_project_name
+}
