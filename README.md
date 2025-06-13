@@ -2,6 +2,12 @@
 
 This repository contains a prototype of Terraform code for provisioning the necessary AWS VPC resources using a modular approach.
 
+# Versioning
+
+| Version | Date      | Description           |
+| ------- | --------- | --------------------- |
+| 0.0.1   | June 2025 | First version of code |
+
 # Prerequisites for the Prototype
 
 1. Set up a GitHub repository to manage project version control and showcase the project to the community.
