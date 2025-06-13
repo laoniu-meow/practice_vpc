@@ -9,9 +9,10 @@ resource "aws_vpc" "primary_vpc" {
 }
 
 resource "aws_subnet" "public_subnet" {
-  vpc_id            = aws_vpc.primary_vpc.id
-  cidr_block        = var.public_subnet_cidr_block
-  availability_zone = var.public_subnet_az[0]
+  vpc_id                  = aws_vpc.primary_vpc.id
+  cidr_block              = var.public_subnet_cidr_block
+  availability_zone       = var.public_subnet_az[0]
+  map_public_ip_on_launch = true
   tags = {
     Name = "${var.prject_name}-public-subnet"
   }
@@ -35,6 +36,12 @@ resource "aws_internet_gateway" "internet_gateway" {
 
 resource "aws_route_table" "route_table" {
   vpc_id = aws_vpc.primary_vpc.id
+
+  route {
+    cidr_block = "0.0.0.0/0"
+    gateway_id = aws_internet_gateway.internet_gateway.id
+  }
+
   tags = {
     Name = "${var.prject_name}-route-table"
   }
