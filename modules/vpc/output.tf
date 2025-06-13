@@ -1,32 +1,40 @@
-# Output the VPC ID
+# Create output for reviewing the result - VPC
 output "vpc_id" {
-  value = aws_vpc.primary_vpc.id
+  description = "The ID of the VPC"
+  value       = aws_vpc.primary_vpc.id
 }
 
 output "vpc_name" {
-  value = aws_vpc.primary_vpc.tags.Name
+  description = "The name of the VPC"
+  value       = aws_vpc.primary_vpc.tags.Name
 }
 
 output "public_subnet_id" {
-  value = aws_subnet.public_subnet.id
+  description = "The ID of the public subnet"
+  value       = aws_subnet.public_subnet.id
 }
 
 output "public_subnet_name" {
-  value = aws_subnet.public_subnet.tags.Name
+  description = "The name of the public subnet"
+  value       = aws_subnet.public_subnet.tags.Name
 }
 
 output "private_subnet_id" {
-  value = aws_subnet.private_subnet.id
+  description = "The ID of the private subnet"
+  value       = aws_subnet.private_subnet.id
 }
 
 output "private_subnet_name" {
-  value = aws_subnet.private_subnet.tags.Name
+  description = "The name of the private subnet"
+  value       = aws_subnet.private_subnet.tags.Name
 }
 
 output "internet_gateway_id" {
-  value = aws_internet_gateway.internet_gateway.id
+  description = "The ID of the internet gateway"
+  value       = aws_internet_gateway.internet_gateway.id
 }
 
 output "route_table_id" {
-  value = aws_route_table.route_table.id
+  description = "The ID of the route table"
+  value       = aws_route_table.route_table.id
 }

@@ -30,7 +30,7 @@ resource "aws_subnet" "private_subnet" {
 resource "aws_internet_gateway" "internet_gateway" {
   vpc_id = aws_vpc.primary_vpc.id
   tags = {
-    Name = "${var.prject_name}-internet-gateway"
+    Name = "${var.prject_name}-igw"
   }
 }
 
@@ -43,7 +43,7 @@ resource "aws_route_table" "route_table" {
   }
 
   tags = {
-    Name = "${var.prject_name}-route-table"
+    Name = "${var.prject_name}-rt"
   }
 }
 
