@@ -6,7 +6,7 @@ This repository contains a prototype of Terraform code for provisioning the nece
 
 | Version | Date      | Description           |
 | ------- | --------- | --------------------- |
-| 0.0.1   | June 2025 | First version of code |
+| ~ 0.0.1 | June 2025 | First version of code |
 
 # Prerequisites for the Prototype
 
@@ -15,15 +15,15 @@ This repository contains a prototype of Terraform code for provisioning the nece
 
 # File Structure Overview
 
-.
-├── main.tf # Root module
-├── variables.tf
-├── outputs.tf
-├── modules/
-│ └── vpc/
-│ ├── main.tf
-│ ├── variables.tf
-│ └── outputs.tf
+- .
+- ├── main.tf # Root module
+- ├── variables.tf
+- ├── outputs.tf
+- ├── modules/
+- │ └── vpc/
+- │ ├── main.tf
+- │ ├── variables.tf
+- │ └── outputs.tf
 
 # Steps to Create the VPC for This Prototype
 
