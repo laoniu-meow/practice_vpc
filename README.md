@@ -29,3 +29,7 @@ This repository contains a prototype of Terraform code for provisioning the nece
 
 1. Execute linux command at root directory: mkdir -p modules/vpc
 2. Command to create main.tf, variables.tf and output.tf files, with command: touch <filename>
+3. Resources in the modules/vpc/main.tf:
+    - VPC (Virtual Private Cloud) 
+    - Each single public and private subnet with availability zones
+    - Internet Gateway 

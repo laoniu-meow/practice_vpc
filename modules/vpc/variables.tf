@@ -12,32 +12,44 @@ variable "vpc_cidr_block" {
   default     = "192.168.0.0/16"
 }
 
-variable "aws_public_subnet_cidr_block" {
+variable "public_subnet_cidr_block" {
   type        = string
   description = "The CIDR block for the subnet"
-  default     = "192.168.1.0/16"
+  default     = "192.168.1.0/24"
 }
 
-variable "aws_private_subnet_cidr_block" {
+variable "private_subnet_cidr_block" {
   type        = string
   description = "The CIDR block for the subnet"
-  default     = "192.168.2.0/16"
+  default     = "192.168.2.0/24"
 }
 
-variable "aws_interne_gateway" {
+variable "public_subnet_az" {
+  type        = list(string)
+  description = "The availability zone for the subnet"
+  default     = ["ap-southeast-1a", "ap-southeast-1b", "ap-southeast-1c"]
+}
+
+variable "private_subnet_az" {
+  type        = list(string)
+  description = "The availability zone for the subnet"
+  default     = ["ap-southeast-1a", "ap-southeast-1b", "ap-southeast-1c"]
+}
+
+variable "internet_gateway" {
   type        = bool
   description = "The name of the internet gateway"
-  default     = "default"
+  default     = true
 }
 
-variable "aws_route_table" {
+variable "route_table" {
   type        = bool
   description = "The name of the route table"
-  default     = "default"
+  default     = true
 }
 
-variable "aws_route_table_association" {
+variable "route_table_association" {
   type        = bool
   description = "The name of the route table association"
-  default     = "default"
+  default     = true
 }

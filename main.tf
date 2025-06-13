@@ -16,7 +16,12 @@ provider "aws" {
 }
 
 module "vpc" {
-  source         = "./modules/vpc"
-  vpc_cidr_block = "192.168.0.0/16"
-  prject_name    = var.aws_project_name
+  source                    = "./modules/vpc"
+  vpc_cidr_block            = "192.168.0.0/16"
+  prject_name               = var.aws_project_name
+  public_subnet_cidr_block  = "192.168.1.0/24"
+  private_subnet_cidr_block = "192.168.2.0/24"
+  internet_gateway          = true
+  route_table               = true
+  route_table_association   = true
 }
