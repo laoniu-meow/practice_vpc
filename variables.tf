@@ -3,7 +3,7 @@
 variable "aws_region" {
   type        = string
   description = "The AWS region to deploy the infrastructure"
-  default     = "us-east-1"
+  default     = "ap-southeast-1"
 }
 
 variable "aws_profile" {
@@ -15,5 +15,5 @@ variable "aws_profile" {
 variable "aws_project_name" {
   type        = string
   description = "The AWS project name to use for the infrastructure"
-  default     = "default"
+  default     = "practice-create-vpc"
 }
